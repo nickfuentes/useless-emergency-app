@@ -7,13 +7,12 @@
   </head>
   <body>
 
-<div class="container">
-  
-  {{> menu}}
+<div class="container-fluid overflow-hidden vh-100 vw-100">
 
-     <h1>Register Page</h1>
+<div class="container form-group">
+    <h1 class="text-center">Register Page</h1>
 
-    <form action="/blogs/register" method="POST">
+    <form action="/login" method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">User Name</label>
             <input type="text" name="username" class="form-control" placeholder="Enter User Name">
@@ -26,17 +25,12 @@
 
         <button type="submit" class="btn btn-primary">Register</button>
 
-        
-        {{#message}}
-            <div class="alert alert-danger" role="alert">
-                {{message}}
-            </div>
-        {{/message}}
-        
     </form>
 </div>
 
-    {{> footer}}
+</div>
 
+   {{> footer}}
+   
   </body>
 </html>
