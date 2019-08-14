@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 const models = require("../models");
+const Emergency = require("../emergency");
 
 /* GET home page. */
 router.get("/", (req, res, next) => {
@@ -59,9 +60,41 @@ router.get("/emergency", (req, res, next) => {
   });
 });
 
-router.get("/emergency/display", (req, res, next) => {
+router.post("/emergency", (req, res, next) => {
+  const [
+    name,
+    age,
+    location,
+    phone,
+    time,
+    safeBool,
+    priority,
+    description,
+    referral
+  ] = [
+    req.body.name,
+    req.body.age,
+    req.body.location,
+    req.body.time,
+    req.body.safe,
+    req.body.priority,
+    req.body.description,
+    req.body.referral
+  ];
+  const emergency = new Emergency(
+    name,
+    age,
+    location,
+    phone,
+    time,
+    safeBool,
+    priority,
+    description,
+    referral
+  );
   res.render("info", {
-    title: "Useless Emergency App"
+    title: "Useless Emergency App",
+    emergency: emergency
   });
 });
 
