@@ -95,7 +95,6 @@ router.post("/emergency", (req, res, next) => {
   res.render("info", {
     title: "Useless Emergency App",
     emergency: emergency
->>>>>>> origin/sequelize
   });
 });
 
