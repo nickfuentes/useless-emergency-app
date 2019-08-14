@@ -60,11 +60,6 @@ router.get("/emergency", (req, res, next) => {
   });
 });
 
-<<<<<<< HEAD
-router.get("/emergency/display", (req, res, next) => {
-  res.render("emergency", {
-    title: "Useless Emergency App"
-=======
 router.post("/emergency", (req, res, next) => {
   const [
     name,
@@ -77,15 +72,15 @@ router.post("/emergency", (req, res, next) => {
     description,
     referral
   ] = [
-    req.body.name,
-    req.body.age,
-    req.body.location,
-    req.body.time,
-    req.body.safe,
-    req.body.priority,
-    req.body.description,
-    req.body.referral
-  ];
+      req.body.name,
+      req.body.age,
+      req.body.location,
+      req.body.time,
+      req.body.safe,
+      req.body.priority,
+      req.body.description,
+      req.body.referral
+    ];
   const emergency = new Emergency(
     name,
     age,
