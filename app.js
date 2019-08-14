@@ -8,6 +8,7 @@ const indexRouter = require("./routes/index");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "public")));
 
 global.__basedir = __dirname;
 app.set("views", path.join(__dirname, "views"));
