@@ -54,13 +54,13 @@ router.post("/register", async (req, res, next) => {
 });
 
 router.get("/emergency", (req, res, next) => {
-  res.render("emergency", {
+  res.render("form", {
     title: "Useless Emergency App"
   });
 });
 
 router.get("/emergency/display", (req, res, next) => {
-  res.render("info", {
+  res.render("emergency", {
     title: "Useless Emergency App"
   });
 });

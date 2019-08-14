@@ -7,12 +7,20 @@
   </head>
   <body>
 
-<div class="container-fluid overflow-hidden vh-100 vw-100">
+  <div class="jumbotron jumbotron-fluid">
+  <div class="container text-center">
+    <img class="text-center" src="https://www.stickpng.com/assets/images/58406746657b0e0e08612e45.png" alt="Smiley face" height="100px">
 
-<div class="container form-group">
-    <h1 class="text-center">Register Page</h1>
+  </div>
+</div>
 
-    <form action="/login" method="POST">
+<div class="container-fluid vh-50 vw-100">
+
+<div class="container login-form">
+    <h1 class="text-center title">Register Page</h1>
+
+
+    <form action="/register" method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">User Name</label>
             <input type="text" name="username" class="form-control" placeholder="Enter User Name">
@@ -23,7 +31,9 @@
             <input type="password" name="password" class="form-control" placeholder="Enter Password">
         </div>
 
+    <div class="container text-center"> 
         <button type="submit" class="btn btn-primary">Register</button>
+    </div>
 
     </form>
 </div>
