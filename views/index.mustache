@@ -4,22 +4,20 @@
     {{> header}}
   </head>
 
- {{> jumbotron}}
-
   <body>
-    <div class="container-fluid overflow-hidden vh-100 vw-100">
-      <div class="container text-center">
-        <h1 class="mt-4">Emergency Services</h1>
-      </div>
+    <div class="container-fluid overflow-hidden vh-100 vw-100" id="container">
+      {{> jumbotron}}
 
-      <div class=" mt-4 container vertical-center overflow-auto">
+      <div class="container vertical-center overflow-auto">
         <div
           class="card text-center container bg-white mb-3 mt-3"
           style="width: 18rem;"
         >
           <h1 class="text-center pt-2">🚓</h1>
           <div class="card-body">
-            <a href="/emergency" class="btn supreme-bg text-white text-center">Police</a>
+            <a href="/emergency" class="btn supreme-bg text-white text-center"
+              >Police</a
+            >
           </div>
         </div>
         <div
@@ -28,7 +26,9 @@
         >
           <h1 class="text-center pt-2">🚒</h1>
           <div class="card-body">
-            <a href="/emergency" class="btn supreme-bg text-white text-center">Fire</a>
+            <a href="/emergency" class="btn supreme-bg text-white text-center"
+              >Fire</a
+            >
           </div>
         </div>
         <div
@@ -37,7 +37,9 @@
         >
           <h1 class="text-center pt-2">🏥</h1>
           <div class="card-body">
-            <a href="/emergency" class="btn supreme-bg text-white text-center">Medical</a>
+            <a href="/emergency" class="btn supreme-bg text-white text-center"
+              >Medical</a
+            >
           </div>
         </div>
       </div>

@@ -4,20 +4,16 @@
     {{> header}}
   </head>
 
- {{> jumbotron}}
-
   <body class="overflow-hidden">
-    <div class="container-fluid overflow-auto vh-100 vw-100">
-      <div class="container text-center">
-        {{! <h1 class="mt-4 text-white">Your Emergency Guide</h1> }}
-      </div>
+    <div class="container-fluid overflow-auto vh-100 vw-100" id="container">
+      {{> jumbotron}}
 
-      <div class="container vertical-center overflow-auto mt-5">
-        <div class="supreme bg-white card text-center container  mb-3 mt-3">
-          <h2 class="text-center pt-2">Step 1:</h2>
-          <h1 class="text-center pt-2">Dial 911 Immediately!</h1>
-          <h2 class="text-center pt-2">Step 2:</h2>
-          <h1 class="text-center pt-2">Give The Dispatcher This Info:</h1>
+      <div class="container vertical-center overflow-auto">
+        <div class="supreme bg-white card text-center container  mb-3">
+          <h3 class="text-center pt-2">Step 1:</h3>
+          <h2 class="text-center pt-2">Dial 911 Immediately!</h2>
+          <h3 class="text-center pt-2">Step 2:</h3>
+          <h2 class="text-center pt-2">Give The Dispatcher This Info:</h2>
           <div class="container mb-4">
             <div class="supreme-bg card text-white">
               <div class="card-body">
