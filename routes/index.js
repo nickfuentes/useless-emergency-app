@@ -63,22 +63,16 @@ router.get("/emergency", (req, res, next) => {
 router.post("/emergency", (req, res, next) => {
   let priorityString;
   let safe;
-  const [
-    name,
-    age,
-    location,
-    phone,
-    time,
-    safeBool,
-    priority,
-    description,
-    referral
-  ] = [
+  let safeBool = false;
+  if (req.body.safe === "true") {
+    safeBool = true;
+  }
+  const [name, age, location, phone, time, priority, description, referral] = [
     req.body.name,
     req.body.age,
     req.body.location,
+    req.body.phone,
     req.body.time,
-    req.body.safe,
     req.body.priority,
     req.body.description,
     req.body.referral

@@ -3,43 +3,36 @@
   <head>
     {{> header}}
   </head>
-  <body>
-    <div class="container-fluid overflow-hidden vh-100 vw-100">
+  <body class="overflow-hidden">
+    <div class="container-fluid overflow-auto vh-100 vw-100">
       <div class="container text-center">
-        <h1>Your Emergency Guide</h1>
+        <h1 class="mt-4">Your Emergency Guide</h1>
       </div>
 
-      <div class="container vertical-center overflow-hidden">
-        <div
-          class="card text-center container bg-secondary mb-3 mt-3"
-          style="width: 18rem;"
-        >
-          <h1 class="text-center pt-2">Step 1: Dial 911 Immediately!</h1>
-          <h1 class="text-center pt-2">
-            Step 2: Give the Dispatcher This Info
-          </h1>
-          <div class="container overflow-auto vh-60">
+      <div class="container vertical-center overflow-auto mt-5">
+        <div class="card text-center container bg-secondary mb-3 mt-3">
+          <h2 class="text-center pt-2">Step 1:</h2>
+          <h1 class="text-center pt-2">Dial 911 Immediately!</h1>
+          <h2 class="text-center pt-2">Step 2:</h2>
+          <h1 class="text-center pt-2">Give The Dispatcher This Info:</h1>
+          <div class="container mb-4">
             <div class="card">
               <div class="card-body">
                 <p>
-                  {{ emergency }}
+                  {{#emergency }}
                   Hello (Mr/Ms) Dispatcher, my name is {{ name }}, I am
                   {{ age }} years old, my phone number is {{ phone }} and I am
-                  experiencing an emergency 🚨. I am located at {{ location }},
-                  {{/emergency}}
-                  I am currently {{ safeString }}, and this is a
+                  experiencing an emergency. I am located at {{ location }}, I
+                  am currently {{ safeString }}, and this is a
                   {{ priorityString }}. Here is a general description of my
-                  {{ emergency }}
-                  situation: {{ description }}.
-                  {{/emergency}}
+                  situation:
                 </p>
+                <div class="well">{{ description }}.</div>
+                {{/emergency}}
               </div>
             </div>
           </div>
-
-          <div class="card-body">
-            <a href="#" class="btn btn-primary text-center">Police</a>
-          </div>
+          <h1>Thanks for Being Referred by {{ emergency.referral }}</h1>
         </div>
       </div>
     </div>
