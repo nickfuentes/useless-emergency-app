@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "fhvvsxzs",
+    "password": "mpSZDZGq84UMbGWsat2zhRTHMP9u1AVX",
+    "database": "fhvvsxzs",
+    "host": "topsy.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "fhvvsxzs",
+    "password": "mpSZDZGq84UMbGWsat2zhRTHMP9u1AVX",
+    "database": "fhvvsxzs",
+    "host": "topsy.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "fhvvsxzs",
+    "password": "mpSZDZGq84UMbGWsat2zhRTHMP9u1AVX",
+    "database": "fhvvsxzs",
+    "host": "topsy.db.elephantsql.com",
+    "dialect": "postgres"
+  }
+}

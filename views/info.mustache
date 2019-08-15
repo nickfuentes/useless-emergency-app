@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> header}}
+  </head>
+
+  <body class="overflow-hidden">
+    <div class="container-fluid overflow-auto vh-100 vw-100" id="container">
+      {{> jumbotron}}
+
+      <div class="container vertical-center overflow-auto">
+        <div class="supreme bg-white card text-center container  mb-3">
+          <h3 class="text-center pt-2">Step 1:</h3>
+          <h2 class="text-center pt-2">Dial 911 Immediately!</h2>
+          <h3 class="text-center pt-2">Step 2:</h3>
+          <h2 class="text-center pt-2">Give The Dispatcher This Info:</h2>
+          <div class="container mb-4">
+            <div class="supreme-bg card text-white">
+              <div class="card-body text-left">
+                <p>
+                  {{#emergency }}
+                  Hello (Mr/Ms) Dispatcher, my name is {{ name }}, I am
+                  {{ age }} years old, my phone number is {{ phone }}, and I am
+                  experiencing an emergency. I am located at {{ location }}, I
+                  am currently {{ safeString }}, and this is a
+                  {{ priorityString }}. Here is a general description of my
+                  situation:
+                </p>
+                <div class="well">{{ description }}.</div>
+                {{/emergency}}
+              </div>
+            </div>
+          </div>
+          <h2>Thanks for Being Referred by {{ emergency.referral }}</h2>
+        </div>
+      </div>
+    </div>
+
+    {{> footer}}
+  </body>
+</html>

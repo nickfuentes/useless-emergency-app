@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> header}}
+  </head>
+
+  <body>
+    <div class="container-fluid overflow-auto vh-100 vw-100" id="container">
+      {{> jumbotron}}
+
+      <div class="container vertical-center overflow-auto">
+        <div
+          class="card text-center container bg-white mb-3 mt-3"
+          style="width: 15rem;"
+        >
+          <h1 class="text-center pt-2">🚓</h1>
+          <div class="card-body">
+            <a href="/emergency" class="btn supreme-bg text-white text-center"
+              >Police</a
+            >
+          </div>
+        </div>
+        <div
+          class="card text-center container bg-white mb-3"
+          style="width: 15rem;"
+        >
+          <h1 class="text-center pt-2">🚒</h1>
+          <div class="card-body">
+            <a href="/emergency" class="btn supreme-bg text-white text-center"
+              >Fire</a
+            >
+          </div>
+        </div>
+        <div
+          class="card text-center container bg-white mb-3"
+          style="width: 15rem;"
+        >
+          <h1 class="text-center pt-2">🏥</h1>
+          <div class="card-body">
+            <a href="/emergency" class="btn supreme-bg text-white text-center"
+              >Medical</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{> footer}}
+  </body>
+</html>

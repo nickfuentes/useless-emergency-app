@@ -1,0 +1,47 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #ff4f4b;
+  color: white;
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 400px;
+}
+
+.jumbotron {
+  margin: 0;
+  height: 150px;
+  background-color: #ff4f4b;
+  padding: 16px;
+  height: 300px;
+}
+
+.title {
+  margin-bottom: 40px;
+}
+
+.btn-primary {
+  color: #ff4f4b;
+  background-color: white;
+  border-color: white;
+  margin-top: 10px;
+}
+
+.supreme {
+  color: #ff4f4b;
+}
+
+.supreme-bg {
+  background-color: #ff4f4b;
+}
+
+#container {
+  height: calc(100vh - 300px);
+}
