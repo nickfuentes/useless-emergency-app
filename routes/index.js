@@ -3,8 +3,16 @@ var router = express.Router();
 const models = require("../models");
 const Emergency = require("../emergency");
 
+const authenticate = (req, res, next) => {
+  if (req.session.user) {
+    next();
+  } else {
+    res.redirect("/login");
+  }
+};
+
 /* GET home page. */
-router.get("/", (req, res, next) => {
+router.get("/", authenticate, (req, res, next) => {
   res.render("index", {
     title: "Useless Emergency App"
   });
@@ -54,7 +62,7 @@ router.post("/register", async (req, res, next) => {
   }
 });
 
-router.get("/emergency", (req, res, next) => {
+router.get("/emergency", authenticate, (req, res, next) => {
   res.render("form", {
     title: "Useless Emergency App"
   });
