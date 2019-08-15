@@ -1,4 +1,3 @@
-const functions = require("firebase-functions");
 const express = require("express");
 const app = express();
 const session = require("express-session");
@@ -47,4 +46,3 @@ function normalizePort(val) {
 const port = normalizePort(process.env.PORT || "3000");
 app.set("port", port);
 app.listen(port);
-exports.app = functions.https.onRequest(app);
