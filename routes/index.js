@@ -61,6 +61,8 @@ router.get("/emergency", (req, res, next) => {
 });
 
 router.post("/emergency", (req, res, next) => {
+  let priorityString;
+  let safe;
   const [
     name,
     age,
@@ -72,15 +74,15 @@ router.post("/emergency", (req, res, next) => {
     description,
     referral
   ] = [
-      req.body.name,
-      req.body.age,
-      req.body.location,
-      req.body.time,
-      req.body.safe,
-      req.body.priority,
-      req.body.description,
-      req.body.referral
-    ];
+    req.body.name,
+    req.body.age,
+    req.body.location,
+    req.body.time,
+    req.body.safe,
+    req.body.priority,
+    req.body.description,
+    req.body.referral
+  ];
   const emergency = new Emergency(
     name,
     age,
@@ -92,9 +94,21 @@ router.post("/emergency", (req, res, next) => {
     description,
     referral
   );
+  if (emergency.safe) {
+    safe = "safe";
+  } else {
+    safe = "in danger";
+  }
+  if (emergency.priority > 2) {
+    priorityString = "major emergency";
+  } else {
+    priorityString = "minor emergency";
+  }
   res.render("info", {
     title: "Useless Emergency App",
-    emergency: emergency
+    emergency: emergency,
+    safeString: safe,
+    priorityString: priorityString
   });
 });
 

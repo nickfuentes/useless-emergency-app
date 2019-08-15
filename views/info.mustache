@@ -21,7 +21,18 @@
           <div class="container overflow-auto vh-60">
             <div class="card">
               <div class="card-body">
-                {{! emergency info here }}
+                <p>
+                  {{ emergency }}
+                  Hello (Mr/Ms) Dispatcher, my name is {{ name }}, I am
+                  {{ age }} years old, my phone number is {{ phone }} and I am
+                  experiencing an emergency 🚨. I am located at {{ location }},
+                  {{/emergency}}
+                  I am currently {{ safeString }}, and this is a
+                  {{ priorityString }}. Here is a general description of my
+                  {{ emergency }}
+                  situation: {{ description }}.
+                  {{/emergency}}
+                </p>
               </div>
             </div>
           </div>
