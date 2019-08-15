@@ -27,8 +27,16 @@ html, body {
 }
 
 .btn-primary {
-    color: #FF1D14;
+    color: #FF4F4B;
     background-color: white;
     border-color: white;
     margin-top: 10px;
+}
+
+.supreme {
+    color: #FF4F4B;
+}
+
+.supreme-bg {
+    background-color: #FF4F4B;
 }
