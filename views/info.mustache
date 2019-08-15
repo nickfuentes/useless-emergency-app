@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> header}}
+  </head>
+  <body>
+    <div class="container-fluid overflow-hidden vh-100 vw-100">
+      <div class="container text-center">
+        <h1>Your Emergency Guide</h1>
+      </div>
+
+      <div class="container vertical-center overflow-hidden">
+        <div
+          class="card text-center container bg-secondary mb-3 mt-3"
+          style="width: 18rem;"
+        >
+          <h1 class="text-center pt-2">Step 1: Dial 911 Immediately!</h1>
+          <h1 class="text-center pt-2">
+            Step 2: Give the Dispatcher This Info
+          </h1>
+          <div class="container overflow-auto vh-60">
+            <div class="card">
+              <div class="card-body">
+                {{! emergency info here }}
+              </div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <a href="#" class="btn btn-primary text-center">Police</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{> footer}}
+  </body>
+</html>

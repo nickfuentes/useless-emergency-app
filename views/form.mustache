@@ -1,101 +1,138 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-
     {{> header}}
-
   </head>
-  <body>
+  <body class="overflow-hidden">
+    <div class="container overflow-auto vh-100">
+      <h1 class="text-center title">Fill Out In A Timely Manner</h1>
 
+      <form action="/emergency" method="POST">
+        <div class="form-group">
+          <label>Name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter name"
+            required
+          />
+        </div>
 
+        <div class="form-group">
+          <label>Age</label>
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Enter age"
+            required
+          />
+        </div>
 
-<div class="container">
-    <h1 class="text-center title">Fill Out In Timely Manner</h1>
+        <div class="form-group">
+          <label>Location</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter location"
+            required
+          />
+        </div>
 
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input
+            type="tel"
+            class="form-control"
+            placeholder="Enter phone number"
+            required
+          />
+        </div>
 
-   <form action="/emergency" method="POST">
+        <div class="form-group">
+          <label>Time</label>
+          <input
+            type="time"
+            class="form-control"
+            placeholder="Enter time"
+            required
+          />
+        </div>
 
-  <div class="form-group">
-    <label>Name</label>
-    <input type="text" class="form-control" placeholder="Enter name">
-  </div>
+        <div class="form-group">
+          <label>Are You Safe?</label>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="safe"
+              value="true"
+              required
+            />
+            <label class="form-check-label">Yes</label>
+          </div>
 
-   <div class="form-group">
-    <label>Age</label>
-    <input type="text" class="form-control" placeholder="Enter age">
-  </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="safe"
+              value="false"
+              required
+            />
+            <label class="form-check-label">No</label>
+          </div>
 
-  <div class="form-group">
-    <label>Location</label>
-    <input type="text" class="form-control" placeholder="Enter location">
-  </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="safe"
+              value="false"
+              required
+            />
+            <label class="form-check-label">I do not know</label>
+          </div>
+        </div>
 
-  <div class="form-group">
-    <label>Phone Number</label>
-    <input type="text" class="form-control" placeholder="Enter phone number">
-  </div>
+        <div class="form-group">
+          <label class="my-1 mr-2">Priority Level</label>
+          <select class="custom-select my-1 mr-sm-2" required>
+            <option selected>Choose...</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+          </select>
+        </div>
 
-   <div class="form-group">
-    <label>Time</label>
-    <input type="text" class="form-control" placeholder="Enter time">
-  </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea
+            class="form-control"
+            placeholder="Description of scene"
+            rows="3"
+            required
+          ></textarea>
+        </div>
 
-<div class="form-group">
-<label>Are You Safe?</label>
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="option1">
-    <label class="form-check-label">Yes</label>
-  </div>
+        <div class="form-group">
+          <label class="my-1 mr-2">How Did You Hear About Us?</label>
+          <select class="custom-select my-1 mr-sm-2" required>
+            <option selected>Choose...</option>
+            <option value="1">Another Victim</option>
+            <option value="2">Flyer</option>
+            <option value="3">Internet</option>
+            <option value="4">Local Ad</option>
+            <option value="5">Local Newspaper</option>
+            <option value="6">Radio</option>
+            <option value="7">Yellow Pages</option>
+            <option value="7">Social Media</option>
+          </select>
+        </div>
+      </form>
+    </div>
 
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="option2">
-    <label class="form-check-label">No</label>
-  </div>
-
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="option2">
-    <label class="form-check-label" >I do not know</label>
-  </div>
-</div>
-
-  <div class="form-group">
-    <label class="my-1 mr-2">Priority Level</label>
-    <select class="custom-select my-1 mr-sm-2">
-        <option selected>Choose...</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-        <option value="4">Four</option>
-        <option value="5">Five</option>
-    </select>
-  </div>
-
-  <div class="form-group">
-    <label>Description</label>
-    <textarea class="form-control" placeholder="Description of scene" rows="3"></textarea>
-  </div>
-
-    <div class="form-group">
-    <label class="my-1 mr-2">How Did You Hear About Us?</label>
-    <select class="custom-select my-1 mr-sm-2">
-        <option selected>Choose...</option>
-        <option value="1">Another Victim</option>
-        <option value="2">Flyer</option>
-        <option value="3">Internet</option>
-        <option value="4">Local Ad</option>
-        <option value="5">Local Newspaper</option>
-        <option value="6">Radio</option>
-        <option value="7">Yellow Pages</option>
-        <option value="7">Social Media</option>
-    </select>
-  </div>
-
-</form>
-</div>
-
-
-
-   {{> footer}}
-   
+    {{> footer}}
   </body>
 </html>
